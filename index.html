@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRK Associates | Complete Maintenance Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="https://raw.githubusercontent.com/sumteck/SRK/main/Logo192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="https://raw.githubusercontent.com/sumteck/SRK/main/Logo512.png" />
+  <!-- സോഷ്യൽ മീഡിയ പ്രിവ്യൂ (Open Graph) ടാഗുകൾ -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SRK Associates | Complete Maintenance Works" />
+<meta property="og:description" content="എല്ലാവിധ മെയിന്റനൻസ് വർക്കുകളും വിശ്വസ്തതയോടെ ചെയ്തു നൽകുന്നു. ബന്ധപ്പെടുക: +91 9400314379" />
+<meta property="og:image" content="https://raw.githubusercontent.com/sumteck/SRK/main/Logo512.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:url" content="https://sumteck.github.io/SRK/" />
+
+<!-- Twitter / X കാർഡ് പ്രിവ്യൂ -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SRK Associates | Complete Maintenance Works" />
+<meta name="twitter:description" content="എല്ലാവിധ മെയിന്റനൻസ് വർക്കുകളും വിശ്വസ്തതയോടെ ചെയ്തു നൽകുന്നു." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/sumteck/SRK/main/Logo512.png" />
+  <style>
+  
+    :root {
+      --saffron: #FF671F;
+      --saffron-light: #FF9933;
+      --white: #FFFFFF;
+      --green: #046A38;
+      --green-light: #138808;
+      --navy: #06038D;
+      --text-dark: #1E293B;
+      --card-shadow: 0 10px 25px -5px rgba(6, 3, 141, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Malayalam', sans-serif;
+      background-color: #FFFFFF;
+      color: var(--text-dark);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* തൂവെള്ള പ്രതലത്തിൽ ഇന്ത്യൻ പതാക പാറുന്ന പശ്ചാത്തല ഇഫക്റ്റ് */
+    .flag-bg-wrapper {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: #FFFFFF;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .flag-wave {
+      position: absolute;
+      top: -15%;
+      left: -15%;
+      width: 130%;
+      height: 130%;
+      background: linear-gradient(
+        165deg,
+        rgba(255, 153, 51, 0.24) 0%,
+        rgba(255, 153, 51, 0.12) 22%,
+        rgba(255, 255, 255, 0.96) 38%,
+        rgba(255, 255, 255, 0.98) 62%,
+        rgba(19, 136, 8, 0.12) 78%,
+        rgba(19, 136, 8, 0.24) 100%
+      );
+      animation: flagFlutter 9s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }
+
+    .flag-shimmer {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.2) 70%);
+      animation: waveRipple 6s ease-in-out infinite;
+    }
+
+    /* മധ്യഭാഗത്ത് പതുക്കെ കറങ്ങുന്ന അശോകചക്രം */
+    .ashoka-watermark {
+      position: fixed;
+      top: 52%;
+      left: 50%;
+      width: 440px;
+      height: 440px;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      opacity: 0.06;
+      pointer-events: none;
+      animation: spinChakra 55s linear infinite;
+    }
+
+    @keyframes flagFlutter {
+      0% {
+        transform: skewY(-1.5deg) scale(1.02) translateX(-1%);
+      }
+      50% {
+        transform: skewY(1.2deg) scale(1.05) translateX(1%);
+      }
+      100% {
+        transform: skewY(-1deg) scale(1.03) translateX(-0.5%);
+      }
+    }
+
+    @keyframes waveRipple {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.95; }
+    }
+
+    @keyframes spinChakra {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* പ്രധാന കണ്ടെയ്നർ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 18px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ഹെഡർ: ഇടത് Contact - മധ്യത്തിൽ Logo - വലത് Contact (സ്കെച്ചിലെ പോലെ) */
+    .top-header {
+      display: grid;
+      grid-template-columns: 1fr 2.1fr 1fr;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: var(--card-shadow);
+      border: 1.5px solid rgba(6, 3, 141, 0.12);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-box.left-box {
+      border-top: 4px solid var(--saffron);
+    }
+
+    .contact-box.right-box {
+      border-top: 4px solid var(--green-light);
+    }
+
+    .contact-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px -5px rgba(6, 3, 141, 0.16);
+    }
+
+    .contact-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #0F172A;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 4px 0;
+      transition: color 0.2s;
+      word-break: break-word;
+    }
+
+    .contact-link:hover {
+      color: var(--saffron);
+    }
+
+    .contact-link.email-text {
+      font-size: 0.88rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    .contact-sub {
+      font-size: 0.82rem;
+      color: #475569;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .mini-action-btn {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #FFFFFF;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .mini-action-btn:hover {
+      opacity: 0.92;
+      transform: scale(1.02);
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, var(--navy), #1E40AF);
+    }
+
+    .btn-wa {
+      background: linear-gradient(135deg, #128C7E, #25D366);
+    }
+
+    .btn-map {
+      margin-top: 8px;
+      background: linear-gradient(135deg, #EA580C, var(--saffron));
+    }
+
+    /* മധ്യഭാഗത്തെ LOGO ബോക്സ് */
+    .logo-center-box {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 18px 24px;
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.12);
+      border: 2px solid rgba(6, 3, 141, 0.14);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo-center-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--saffron), #FFFFFF, var(--green-light));
+    }
+
+    .custom-logo-img {
+      max-height: 180px;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    /* 3-ാമത്തെ ചിത്രത്തിലെ പോലെ SRK Associates വെക്റ്റർ ലോഗോ */
+    .default-srk-logo {
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .srk-letters {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.18));
+    }
+
+    .letter-s {
+      background: linear-gradient(180deg, #FFB020 0%, #FF671F 60%, #D9480F 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .letter-r {
+      background: linear-gradient(180deg, #1D4ED8 0%, #06038D 70%, #030249 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .letter-k {
+      background: linear-gradient(180deg, #4ADE80 0%, #138808 60%, #046A38 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .associates-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+      font-weight: 900;
+      color: #0B192C;
+      letter-spacing: 3px;
+      margin-top: 4px;
+    }
+
+    .tagline-ribbon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .side-flag-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      width: 28px;
+    }
+
+    .side-flag-bars span:nth-child(1) { height: 4px; background: var(--saffron); border-radius: 2px; }
+    .side-flag-bars span:nth-child(2) { height: 4px; background: #E2E8F0; border-radius: 2px; }
+    .side-flag-bars span:nth-child(3) { height: 4px; background: var(--green-light); border-radius: 2px; }
+
+    .tagline-pill {
+      background: linear-gradient(90deg, #06038D, #1E3A8A);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+      padding: 5px 18px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(6, 3, 141, 0.25);
+    }
+
+    .ml-subtitle {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-top: 8px;
+    }
+
+    /* സേവന ബട്ടണുകളുടെ വിഭാഗം (സ്കെച്ചിൽ വരച്ചതുപോലെ 4x2 ഗ്രിഡ്, കൂടുതൽ ബട്ടണുകൾ ചേർത്താൽ തനിയെ ക്രമീകരിക്കപ്പെടും) */
+    .services-section {
+      margin: 10px 0 24px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-heading span {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 6px 20px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--navy);
+      border: 1px solid rgba(6, 3, 141, 0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .buttons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .service-btn {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(6, 3, 141, 0.14);
+      border-radius: 16px;
+      padding: 18px 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      font-family: inherit;
+    }
+
+    .service-btn::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--navy), var(--green-light));
+      opacity: 0.75;
+      transition: height 0.2s;
+    }
+
+    .service-btn:hover {
+      transform: translateY(-5px);
+      border-color: var(--saffron);
+      background: #FFFFFF;
+      box-shadow: 0 18px 32px -8px rgba(255, 103, 31, 0.22);
+    }
+
+    .service-btn:hover::after {
+      height: 6px;
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(19, 136, 8, 0.15));
+      color: var(--navy);
+    }
+
+    .service-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.35;
+    }
+
+    .service-desc {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #64748B;
+      line-height: 1.3;
+    }
+
+    /* ഫൂട്ടർ */
+    .footer-bar {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 16px 20px;
+      border: 1px solid rgba(6, 3, 141, 0.12);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--saffron);
+      text-decoration: underline;
+    }
+
+    /* മോഡൽ (സേവന ബുക്കിംഗ് പോപ്പ്അപ്പ്) */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 100;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-top: 6px solid var(--saffron);
+      position: relative;
+      animation: popIn 0.22s ease-out;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.94); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: #F1F5F9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: #475569;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #334155;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1.5px solid #CBD5E1;
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn-primary {
+      background: #25D366;
+      color: #FFFFFF;
+      border: none;
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+      background: var(--navy);
+      color: #FFFFFF;
+      border: none;
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* റെസ്പോൺസീവ് (മൊബൈൽ / ടാബ്‌ലെറ്റ്) */
+    @media (max-width: 960px) {
+      .top-header {
+        grid-template-columns: 1fr;
+      }
+      .logo-center-box {
+        order: -1;
+      }
+      .buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .service-btn {
+        padding: 14px 10px;
+      }
+      .service-name {
+        font-size: 0.9rem;
+      }
+      .ashoka-watermark {
+        width: 280px;
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- തൂവെള്ള പ്രതലത്തിൽ ഇന്ത്യൻ പതാക പാറുന്ന പശ്ചാത്തലം -->
+  <div class="flag-bg-wrapper">
+    <div class="flag-wave"></div>
+    <div class="flag-shimmer"></div>
+  </div>
+
+  <!-- മധ്യഭാഗത്തെ അശോകചക്രം -->
+  <svg class="ashoka-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" fill="none" stroke="#06038D" stroke-width="6"/>
+    <circle cx="100" cy="100" r="14" fill="#06038D"/>
+    <g id="spokes" stroke="#06038D" stroke-width="3"></g>
+  </svg>
+
+  <div class="container">
+    <!-- മുകൾ ഭാഗം: ഇടത് Contact | മധ്യത്തിൽ LOGO | വലത് Contact -->
+    <header class="top-header">
+      <!-- ഇടതുവശത്തെ Contact ബോക്സ് -->
+      <div class="contact-box left-box">
+        <div class="contact-title">📞 ബന്ധപ്പെടുക (Contact)</div>
+        <a href="tel:+919400314379" class="contact-link">+91 9400314379</a>
+        <a href="tel:+916238456388" class="contact-link">+91 6238456388</a>
+        <a href="tel:+919400314379" class="mini-action-btn btn-call">ഇപ്പോൾ വിളിക്കുക</a>
+      </div>
+
+      <!-- മധ്യഭാഗത്തെ LOGO ബോക്സ് -->
+      <div class="logo-center-box" id="logoContainer">
+        <!-- JavaScript വഴി SITE_CONFIG അനുസരിച്ച് ലോഗോ ഇവിടെ ലോഡ് ആകും -->
+      </div>
+
+      <!-- വലതുവശത്തെ Contact & Location ബോക്സ് -->
+      <div class="contact-box right-box">
+        <div class="contact-title">💬 വാട്സ്ആപ്പ് & വിലാസം</div>
+        <a href="mailto:srka6675@gmail.com" class="contact-link email-text">✉️ srka6675@gmail.com</a>
+        <a href="https://wa.me/919400314379?text=%E0%B4%A8%E0%B4%AE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82%20SRK%20Associates,%20%E0%B4%B8%E0%B5%87%E0%B4%B5%E0%B4%A8%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%86%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%B1%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%8D%20%E0%B4%85%E0%B4%B1%E0%B4%BF%E0%B4%AF%E0%B4%BE%E0%B5%BB%20%E0%B4%A4%E0%B4%BE%E0%B4%B2%E0%B5%8D%E0%B4%AA%E0%B4%B0%E0%B5%8D%E0%B4%AF%E0%B4%AE%E0%B5%81%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%8D." target="_blank" rel="noopener" class="mini-action-btn btn-wa">വാട്സ്ആപ്പ് സന്ദേശം</a>
+        <a href="https://www.google.com/maps/place/Peace+palace/@9.7627468,76.326193,17z/data=!3m1!4b1!4m6!3m5!1s0x3b087b004133d063:0x6eca12271483de98!8m2!3d9.7627468!4d76.326193!16s%2Fg%2F11z0ylfctq?entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="mini-action-btn btn-map">📍 ലൊക്കേഷൻ (Google Map)</a>
+      </div>
+    </header>
+
+    <!-- സേവന ബട്ടണുകളുടെ ഭാഗം -->
+    <main class="services-section">
+      <div class="section-heading">
+        <span>🛠️ ഞങ്ങളുടെ പ്രധാന സേവനങ്ങൾ (Complete Maintenance Works)</span>
+      </div>
+
+      <div class="buttons-grid" id="servicesGrid">
+        <!-- SITE_CONFIG.services ലിസ്റ്റിൽ നിന്നും ബട്ടണുകൾ തനിയെ ഇവിടെ വരും -->
+      </div>
+    </main>
+
+    <!-- താഴെയുള്ള ഫൂട്ടർ -->
+    <footer class="footer-bar">
+      <div>
+        <strong>© 2026 SRK Associates</strong> — എല്ലാവിധ മെയിന്റനൻസ് വർക്കുകളും വിശ്വസ്തതയോടെ ചെയ്തു നൽകുന്നു.
+      </div>
+      <div class="footer-links">
+        <a href="tel:+919400314379">📞 +91 9400314379</a>
+        <a href="tel:+916238456388">📞 +91 6238456388</a>
+        <a href="mailto:srka6675@gmail.com">✉️ srka6675@gmail.com</a>
+        <a href="https://www.google.com/maps/place/Peace+palace/@9.7627468,76.326193,17z/data=!3m1!4b1!4m6!3m5!1s0x3b087b004133d063:0x6eca12271483de98!8m2!3d9.7627468!4d76.326193!16s%2Fg%2F11z0ylfctq?entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">📍 Peace Palace (Google Map)</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- സേവന ബുക്കിംഗ് മോഡൽ -->
+  <div class="modal-backdrop" id="serviceModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-title" id="modalServiceTitle">സേവനം ബുക്ക് ചെയ്യുക</div>
+      <p class="modal-subtitle" id="modalServiceDesc"></p>
+
+      <div class="form-group">
+        <label>നിങ്ങളുടെ പേര്</label>
+        <input type="text" id="custName" placeholder="ഉദാ: സുമേഷ്" />
+      </div>
+      <div class="form-group">
+        <label>സ്ഥലം / വിലാസം</label>
+        <input type="text" id="custPlace" placeholder="നിങ്ങളുടെ സ്ഥലം നൽകുക" />
+      </div>
+      <div class="form-group">
+        <label>ആവശ്യമുള്ള വർക്കിന്റെ വിവരങ്ങൾ</label>
+        <textarea id="custNote" rows="2" placeholder="ചുരുക്കത്തിൽ വിവരിക്കുക..."></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="sendWhatsAppBooking()">💬 വാട്സ്ആപ്പ് വഴി അയക്കുക</button>
+        <a href="tel:+919400314379" class="btn-secondary">📞 നേരിട്ട് വിളിക്കുക</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 🔧 SITE_CONFIG: നിങ്ങൾക്ക് ആവശ്യമുള്ള മാറ്റങ്ങൾ ഇവിടെ മാത്രം വരുത്തുക
+    // =========================================================================
+    const SITE_CONFIG = {
+      // 1. നിങ്ങളുടെ ലോഗോയുടെ ലിങ്ക് താഴെ "" നുള്ളിൽ നൽകുക (ഉദാ: "https://example.com/logo.png" അല്ലെങ്കിൽ "logo.png")
+      // ഒഴിഞ്ഞു കിടന്നാൽ ഇപ്പോഴുള്ള SRK Associates ലോഗോ ഡിസൈൻ കാണിക്കും.
+      logoUrl: "https://github.com/sumteck/SRK/blob/main/srk.jpeg",
+
+      // 2. വാട്സ്ആപ്പ് ബുക്കിംഗ് മെസ്സേജ് പോകേണ്ട നമ്പർ (91 ചേർത്ത് നൽകുക)
+      whatsappNumber: "919400314379",
+
+      // 3. സേവന ബട്ടണുകൾ: പുതിയ ബട്ടണുകൾ ചേർക്കാൻ താഴെ { ... }, എന്ന രീതിയിൽ പുതിയ വരികൾ ചേർത്താൽ മതി.
+      services: [
+        {
+          icon: "⚡",
+          title: "ഇലക്ട്രിക്കൽ വർക്കുകൾ",
+          desc: "വയറിംഗ്, ഇൻവെർട്ടർ, ഫാൻ & ലൈറ്റ് റിപ്പയർ"
+        },
+        {
+          icon: "🚰",
+          title: "പ്ലംബിംഗ് & പൈപ്പ് വർക്ക്",
+          desc: "ടാപ്പ്, മോട്ടോർ, വാട്ടർ ടാങ്ക് ഫിറ്റിംഗ് & ലീക്ക് റിപ്പയർ"
+        },
+        {
+          icon: "🪚",
+          title: "കാർപെന്ററി & ഫർണിച്ചർ",
+          desc: "വാതിൽ, ജനൽ, ലോക്ക് & ഫർണിച്ചർ അറ്റകുറ്റപ്പണികൾ"
+        },
+        {
+          icon: "🎨",
+          title: "പെയിന്റിംഗ് & പോളിഷിംഗ്",
+          desc: "വീടുകളുടെയും ഓഫീസുകളുടെയും ഇന്റീരിയർ & എക്സ്റ്റീരിയർ"
+        },
+        {
+          icon: "❄️",
+          title: "എ.സി & ഫ്രിഡ്ജ് സർവീസ്",
+          desc: "എ.സി ഇൻസ്റ്റാളേഷൻ, ഗ്യാസ് ഫില്ലിംഗ് & മെയിന്റനൻസ്"
+        },
+        {
+          icon: "🧱",
+          title: "സിവിൽ & ടൈൽ വർക്കുകൾ",
+          desc: "ടൈൽ പതിക്കൽ, വാട്ടർപ്രൂഫിംഗ് & ചെറിയ നിർമ്മാണങ്ങൾ"
+        },
+        {
+          icon: "⚙️",
+          title: "വെൽഡിംഗ് & ഗേറ്റ് വർക്ക്",
+          desc: "ഗേറ്റ്, ഗ്രിൽ, റൂഫിംഗ് & ഓട്ടോമാറ്റിക് ഗേറ്റ് സർവീസ്"
+        },
+        {
+          icon: "🏠",
+          title: "സമ്പൂർണ്ണ ഹോം മെയിന്റനൻസ്",
+          desc: "വീടുകൾക്കും സ്ഥാപനങ്ങൾക്കും എല്ലാവിധ സർവീസുകളും"
+        },
+         {
+          icon: "🏘️",
+          title: "അലൂമിനിയം ഫാബ്രിക്കേഷൻ",
+          desc: "കിച്ചൻകബോർഡ്,ടിവി യൂണിറ്റ്,വാൾഡ്രോബ്,സീലിംഗ്"
+        },
+        {
+          icon: "🔋🛠️🔌",
+          title: "ഇലക്ട്രോണിക് വർക്ക്",
+          desc: "ടിവി,സൗണ്ട് സിസ്റ്റം,എൽഇഡി വർക്ക്"
+        }
+        
+
+        // പുതിയ ബട്ടൺ ചേർക്കാൻ താഴെ കാണുന്ന മാതൃക ഉപയോഗിക്കുക:
+        // ,{
+        //   icon: "📹",
+        //   title: "സിസിടിവി & സെക്യൂരിറ്റി",
+        //   desc: "ക്യാമറ ഇൻസ്റ്റാളേഷൻ & സർവീസ്"
+        // }
+      ]
+    };
+    // =========================================================================
+
+    // അശോകചക്രത്തിന്റെ 24 ആരക്കാലുകൾ വരയ്ക്കുന്നു
+    const spokesGroup = document.getElementById('spokes');
+    for (let i = 0; i < 24; i++) {
+      const angle = (i * 15) * (Math.PI / 180);
+      const x2 = 100 + 88 * Math.cos(angle);
+      const y2 = 100 + 88 * Math.sin(angle);
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', '100');
+      line.setAttribute('y1', '100');
+      line.setAttribute('x2', x2.toFixed(2));
+      line.setAttribute('y2', y2.toFixed(2));
+      spokesGroup.appendChild(line);
+    }
+
+    // ലോഗോ ലോഡ് ചെയ്യുന്നു
+    function renderLogo() {
+      const logoContainer = document.getElementById('logoContainer');
+      if (SITE_CONFIG.logoUrl && SITE_CONFIG.logoUrl.trim() !== "") {
+        logoContainer.innerHTML = `<img src="${SITE_CONFIG.logoUrl}" alt="SRK Associates Logo" class="custom-logo-img" />`;
+      } else {
+        logoContainer.innerHTML = `
+          <div class="default-srk-logo">
+            <svg width="160" height="44" viewBox="0 0 220 55" style="margin-bottom:-6px;">
+              <path d="M20,48 L95,10 L170,48" fill="none" stroke="#FF671F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M125,22 L170,48" fill="none" stroke="#138808" stroke-width="8" stroke-linecap="round"/>
+              <rect x="85" y="28" width="8" height="8" fill="#1E293B" rx="1"/>
+              <rect x="96" y="28" width="8" height="8" fill="#1E293B" rx="1"/>
+              <rect x="85" y="39" width="8" height="8" fill="#1E293B" rx="1"/>
+              <rect x="96" y="39" width="8" height="8" fill="#1E293B" rx="1"/>
+              <text x="176" y="42" font-size="24">🛠️⚙️</text>
+            </svg>
+            <div class="srk-letters">
+              <span class="letter-s">S</span>
+              <span class="letter-r">R</span>
+              <span class="letter-k">K</span>
+            </div>
+            <div class="associates-title">ASSOCIATES</div>
+            <div class="tagline-ribbon-wrap">
+              <div class="side-flag-bars"><span></span><span></span><span></span></div>
+              <div class="tagline-pill">Complete Maintenance Works</div>
+              <div class="side-flag-bars"><span></span><span></span><span></span></div>
+            </div>
+            <div class="ml-subtitle">എല്ലാവിധ മെയിന്റനൻസ് വർക്കുകളും</div>
+          </div>
+        `;
+      }
+    }
+
+    // സേവന ബട്ടണുകൾ നിർമ്മിക്കുന്നു
+    let selectedServiceName = "";
+
+    function renderServices() {
+      const grid = document.getElementById('servicesGrid');
+      grid.innerHTML = "";
+      SITE_CONFIG.services.forEach((srv) => {
+        const btn = document.createElement('button');
+        btn.className = 'service-btn';
+        btn.type = 'button';
+        btn.innerHTML = `
+          <div class="service-icon">${srv.icon}</div>
+          <div class="service-name">${srv.title}</div>
+          <div class="service-desc">${srv.desc}</div>
+        `;
+        btn.onclick = () => openModal(srv);
+        grid.appendChild(btn);
+      });
+    }
+
+    // മോഡൽ തുറക്കാനും അടക്കാനും
+    function openModal(service) {
+      selectedServiceName = service.title;
+      document.getElementById('modalServiceTitle').textContent = `${service.icon} ${service.title}`;
+      document.getElementById('modalServiceDesc').textContent = `${service.desc}. സേവനം ആവശ്യപ്പെടുന്നതിനായി താഴെ വിവരങ്ങൾ നൽകുക:`;
+      document.getElementById('serviceModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('serviceModal').classList.remove('active');
+    }
+
+    document.getElementById('serviceModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // വാട്സ്ആപ്പ് ബുക്കിംഗ് അയക്കുന്നു
+    function sendWhatsAppBooking() {
+      const name = document.getElementById('custName').value.trim() || "നൽകിയിട്ടില്ല";
+      const place = document.getElementById('custPlace').value.trim() || "നൽകിയിട്ടില്ല";
+      const note = document.getElementById('custNote').value.trim() || "വിവരങ്ങൾ വിളിച്ചു പറയാം";
+
+      const message = `*SRK Associates - പുതിയ സർവീസ് അന്വേഷണം*\n\n` +
+                      `🛠️ *സേവനം:* ${selectedServiceName}\n` +
+                      `👤 *പേര്:* ${name}\n` +
+                      `📍 *സ്ഥലം:* ${place}\n` +
+                      `📝 *വിവരങ്ങൾ:* ${note}`;
+
+      const url = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // പേജ് ലോഡ് ചെയ്യുമ്പോൾ പ്രവർത്തിപ്പിക്കുന്നു
+    renderLogo();
+    renderServices();
+  </script>
+</body>
+</html>
